@@ -58,7 +58,7 @@ const SideNavbar = () => {
                 <span>Bookings</span>
               </div>
               <FontAwesomeIcon
-                className={`mr-2 transform transition-transform duration-500 ${dropdowns.bookings ? 'rotate-180' : 'rotate-0'}`}
+                className={`mr-2 transform transition-transform duration-500 ${dropdowns.bookings ? 'rotate-180 bg-white rounded-full p-1' : 'rotate-0 p-1'}`}
                 icon={faChevronDown}
               />
             </button>
@@ -100,7 +100,7 @@ const SideNavbar = () => {
                 <span>Destinations</span>
               </div>
               <FontAwesomeIcon
-                className={`mr-2 transform transition-transform duration-500 ${dropdowns.destinations ? 'rotate-180' : 'rotate-0'}`}
+                className={`mr-2 transform transition-transform duration-500 ${dropdowns.destinations ? 'rotate-180 bg-white rounded-full p-1' : 'rotate-0 p-1'}`}
                 icon={faChevronDown}
               />
             </button>
@@ -142,7 +142,7 @@ const SideNavbar = () => {
                 <span>Packages</span>
               </div>
               <FontAwesomeIcon
-                className={`mr-2 transform transition-transform duration-500 ${dropdowns.packages ? 'rotate-180' : 'rotate-0'}`}
+                className={`mr-2 transform transition-transform duration-500 ${dropdowns.packages ? 'rotate-180 bg-white rounded-full p-1' : 'rotate-0 p-1'}`}
                 icon={faChevronDown}
               />
             </button>
@@ -187,7 +187,7 @@ const SideNavbar = () => {
                 <span>Client Profile</span>
               </div>
               <FontAwesomeIcon
-                className={`mr-2 transform transition-transform duration-500 ${dropdowns.clientprofile ? 'rotate-180' : 'rotate-0'}`}
+                className={`mr-2 transform transition-transform duration-500 ${dropdowns.clientprofile ? 'rotate-180 bg-white rounded-full p-1' : 'rotate-0 p-1'}`}
                 icon={faChevronDown}
               />
             </button>
@@ -229,7 +229,7 @@ const SideNavbar = () => {
                 <span>Landing Page</span>
               </div>
               <FontAwesomeIcon
-                className={`mr-2 transform transition-transform duration-500 ${dropdowns.landingpage ? 'rotate-180' : 'rotate-0'}`}
+                className={`mr-2 transform transition-transform duration-500 ${dropdowns.landingpage ? 'rotate-180 bg-white rounded-full p-1' : 'rotate-0 p-1'}`}
                 icon={faChevronDown}
               />
             </button>
