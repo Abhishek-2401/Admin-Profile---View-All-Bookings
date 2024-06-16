@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import ViewAllBookings from './ViewAllBookings';
 
 const SideNavbar = () => {
@@ -36,8 +36,8 @@ const SideNavbar = () => {
   };
 
   return (
-    <div className="flex h-screen ">
-      <nav className="w-64 bg-[#FFFFFF] text-black h-screen ">
+    <div className="flex h-screen">
+      <nav className="w-64 bg-[#FFFFFF] text-black h-screen">
         <div className="p-4">
           <h1 className="text-sm text-[#404040] font-medium mb-6">MENU</h1>
           <div className="mb-6">
@@ -58,13 +58,13 @@ const SideNavbar = () => {
                 <span>Bookings</span>
               </div>
               <FontAwesomeIcon
-                className={`mr-2 ${dropdowns.bookings ? 'bg-white rounded-full p-1' : 'p-1'}`}
-                icon={dropdowns.bookings ? faChevronUp : faChevronDown}
+                className={`mr-2 transform transition-transform duration-500 ${dropdowns.bookings ? 'rotate-180' : 'rotate-0'}`}
+                icon={faChevronDown}
               />
             </button>
             <div
-              className={` overflow-hidden ${
-                dropdowns.bookings ? 'max-h-screen' : 'max-h-0'
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                dropdowns.bookings ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
               <div className="ml-[2px] text-[#666666] text-sm font-normal border-l-2 border-[#157939] flex flex-col">
@@ -100,11 +100,15 @@ const SideNavbar = () => {
                 <span>Destinations</span>
               </div>
               <FontAwesomeIcon
-                className={`mr-2 ${dropdowns.destinations ? 'bg-white rounded-full p-1' : 'p-1'}`}
-                icon={dropdowns.destinations ? faChevronUp : faChevronDown}
+                className={`mr-2 transform transition-transform duration-500 ${dropdowns.destinations ? 'rotate-180' : 'rotate-0'}`}
+                icon={faChevronDown}
               />
             </button>
-            {dropdowns.destinations && (
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                dropdowns.destinations ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
               <div className="ml-[2px] text-[#666666] text-sm font-normal border-l-2 border-[#157939] flex flex-col">
                 <button
                   onClick={() => selectSubmenu('createDestination')}
@@ -123,7 +127,7 @@ const SideNavbar = () => {
                   View All Destinations
                 </button>
               </div>
-            )}
+            </div>
           </div>
 
           <div className="mb-16">
@@ -138,11 +142,15 @@ const SideNavbar = () => {
                 <span>Packages</span>
               </div>
               <FontAwesomeIcon
-                className={`mr-2 ${dropdowns.packages ? 'bg-white rounded-full p-1' : 'p-1'}`}
-                icon={dropdowns.packages ? faChevronUp : faChevronDown}
+                className={`mr-2 transform transition-transform duration-500 ${dropdowns.packages ? 'rotate-180' : 'rotate-0'}`}
+                icon={faChevronDown}
               />
             </button>
-            {dropdowns.packages && (
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                dropdowns.packages ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
               <div className="ml-[2px] text-[#666666] text-sm font-normal border-l-2 border-[#157939] flex flex-col">
                 <button
                   onClick={() => selectSubmenu('createPackage')}
@@ -161,7 +169,7 @@ const SideNavbar = () => {
                   View All Packages
                 </button>
               </div>
-            )}
+            </div>
           </div>
 
           <div className="mb-4">
@@ -179,11 +187,15 @@ const SideNavbar = () => {
                 <span>Client Profile</span>
               </div>
               <FontAwesomeIcon
-                className={`mr-2 ${dropdowns.clientprofile ? 'bg-white rounded-full p-1' : 'p-1'}`}
-                icon={dropdowns.clientprofile ? faChevronUp : faChevronDown}
+                className={`mr-2 transform transition-transform duration-500 ${dropdowns.clientprofile ? 'rotate-180' : 'rotate-0'}`}
+                icon={faChevronDown}
               />
             </button>
-            {dropdowns.clientprofile && (
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                dropdowns.clientprofile ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
               <div className="ml-[2px] text-[#666666] text-sm font-normal border-l-2 border-[#157939] flex flex-col">
                 <button
                   onClick={() => selectSubmenu('createProfile')}
@@ -202,7 +214,7 @@ const SideNavbar = () => {
                   View All Profiles
                 </button>
               </div>
-            )}
+            </div>
           </div>
 
           <div className="mb-4">
@@ -217,11 +229,15 @@ const SideNavbar = () => {
                 <span>Landing Page</span>
               </div>
               <FontAwesomeIcon
-                className={`mr-2 ${dropdowns.landingpage ? 'bg-white rounded-full p-1' : 'p-1'}`}
-                icon={dropdowns.landingpage ? faChevronUp : faChevronDown}
+                className={`mr-2 transform transition-transform duration-500 ${dropdowns.landingpage ? 'rotate-180' : 'rotate-0'}`}
+                icon={faChevronDown}
               />
             </button>
-            {dropdowns.landingpage && (
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                dropdowns.landingpage ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
               <div className="ml-[2px] text-[#666666] text-sm font-normal border-l-2 border-[#157939] flex flex-col">
                 <button
                   onClick={() => selectSubmenu('advertisements')}
@@ -248,7 +264,7 @@ const SideNavbar = () => {
                   Hero Section
                 </button>
               </div>
-            )}
+            </div>
           </div>
 
           <div className="mt-auto mt-12">
